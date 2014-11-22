@@ -1,7 +1,8 @@
-# Founded In Romania
+# Founded In USA
 
-  * Website for [www.foundedinromania.com](http://foundedinromania.com).
-  * Created by [Cloudients](http://www.cloudients.com).
+  * Website for [www.foundedinusa.com](http://foundedinusa.com).
+  * Created by Daniel Patz.
+  * Credit goes to [Cloudients](http://www.cloudients.com) for initial code base.
 
 ## Features
   1. Shows the first page with the list of startups.
@@ -99,6 +100,6 @@ Go to http://localhost:5000/
 
 License
 =======
-This software is licensed under the MIT License. See [LICENSE.md] (https://github.com/FoundedX/founded-in-romania/blob/master/LICENSE.md) for details.
+This software is licensed under the MIT License. See [LICENSE.md] (https://github.com/dpatz/founded-in-usa/blob/master/LICENSE.md) for details.
 
 Portions of this software are copyright of their own owners as described in the files containing them.
