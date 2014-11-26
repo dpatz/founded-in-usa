@@ -40,7 +40,7 @@
             <footer>
             	<span>{# Brought to you by <a href="http://cloudients.com" target="_blank">Cloudients</a>.  #}All the logos and trademarks used on this website belong to its rightful owner.<br>
                 Thanks to <a href="http://cloudients.com" target="_blank">Cloudients</a> for the initial code base.</span>
-                <a href="http://foundedinusa.com" class="no-link"><img src="{{ url_for('static', filename='images/logo-dracula.png') }}" alt="Founded in USA"></a>
+                <a href="http://foundedx.com" class="no-link"><img src="{{ url_for('static', filename='images/partoffoundedx.png') }}" alt="Founded X"></a>
             </footer>
             {% endblock %}
 		</div>
@@ -71,6 +71,7 @@
 		});
     </script>
 
+	{# Google Analytics #}
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -82,17 +83,50 @@
 	  ga('send', 'pageview');
 	</script>
 
+	{# Minimal form #}
+	<script src="{{ url_for('static', filename='js/classie.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/stepsForm.js') }}"></script>
+	<script>
+        $(function() {
+			var theForm = document.getElementById( 'theForm' );
+
+			new stepsForm( theForm, {
+				onSubmit : function( form ) {
+					// hide form
+					classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
+
+					/*
+					form.submit()
+					or
+					AJAX request (maybe show loading indicator while we don't have an answer..)
+					*/
+
+					// let's just simulate something...
+					var messageEl = theForm.querySelector( '.final-message' );
+					messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
+					classie.addClass( messageEl, 'show' );
+				}
+			} );
+
+			$('.join_the_list').on('click', function (e) {
+                e.preventDefault();
+                $('.join_form').slideDown('fast');
+            });
+		});
+	</script>
+
+	{# Twitter #}
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-	</script>
+	{# Facebook #}
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 
 	</body>
 </html>
