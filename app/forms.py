@@ -8,7 +8,7 @@ class LoginForm(form.Form):
     """
     Login and registration forms (for flask-login).
     """
-    login = fields.TextField(validators=[validators.required()])
+    login = fields.StringField(validators=[validators.required()])
     password = fields.PasswordField(validators=[validators.required()])
 
     def validate_login(self, field):

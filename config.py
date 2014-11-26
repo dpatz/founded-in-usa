@@ -8,7 +8,10 @@ class Config(object):
     # Secret key for the app
     SECRET_KEY = '0123456789'
     # Database URI that is written in venv/bin/activate
-    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+    try:
+        SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+    except KeyError:
+        pass
     # Credentials to access typeform API (https://admin.typeform.com/account)
     TYPEFORM_FORM_UID = 'XXXXXX'
     TYPEFORM_API_KEY = '012345...'
@@ -29,6 +32,8 @@ class StagingConfig(Config):
 class DevelopmentConfig(Config):
     DEVELOPMENT = True
     DEBUG = True
+    SQLALCHEMY_DATABASE_URI = \
+        'postgres://foundedinusa:foundedinusa@localhost:5432/foundedinusa'
 
 
 class TestingConfig(Config):

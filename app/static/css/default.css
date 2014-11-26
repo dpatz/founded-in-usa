@@ -36,16 +36,16 @@ body, html { font-size: 100%; 	padding: 0; margin: 0;}
 
 body {
     font-family: 'Lato', Calibri, Arial, sans-serif;
-	font-weight:300;
+	font-weight: 300;
     color: #ffffff;
-	background-color:#ce1126;
+	background-color: #305A91;
 
 }
 
 a {
 	color: #fff;
-	background-color:#860d1a;
-	padding:0.188em;
+	background-color: #24426d;
+	padding: 0.188em;
 	text-decoration: none;
 	-webkit-border-radius: 0.188em;
 	-moz-border-radius: 0.188em;
@@ -54,13 +54,13 @@ a {
 
 a:hover {
 	color: #fff;
-	background:none;
+	background: none;
 	text-decoration: underline;
 }
 
 a.no-link {
-	background:none;
-	padding:0;
+	background: none;
+	padding: 0;
 }
 
 .main,
@@ -68,7 +68,7 @@ a.no-link {
 	width: 100%;
 	max-width: 60em;
 	margin: 0 auto;
-	text-align:center;
+	text-align: center;
 }
 
 .container > header {
@@ -76,13 +76,13 @@ a.no-link {
 }
 
 .container > header img {
-	width:70%;
-	margin:3.125em 0;
+	width: 70%;
+	margin: 3.125em 0;
 }
 
 @media screen and (max-width: 660px) {
 	.container > header img {
-		width:100%;
+		width: 100%;
 	}
 }
 
@@ -91,11 +91,11 @@ a.no-link {
 	line-height: 1.5;
 	margin: 1.250em 0;
 	font-weight: 300;
-	display:none;
+	display: none;
 }
 
 .container > header span {
-	font-size:1em;
+	font-size: 1em;
 	display: block;
 	font-weight: 300;
 	line-height: 1.75;
@@ -108,7 +108,7 @@ a.no-link {
 }
 
 .container > header span.about {
-	text-align:justify;
+	text-align: justify;
 }
 
 .container h3 {
@@ -123,8 +123,8 @@ a.no-link {
 	width: 100%;
 	max-width: 60em;
 	margin: 0 auto;
-	clear:both;
-	text-align:center;
+	clear: both;
+	text-align: center;
 	padding: 3.750em 1.250em 0.250em;
 }
 
@@ -133,7 +133,7 @@ a.no-link {
 }
 
 .container .join-box span {
-	font-size:1em;
+	font-size: 1em;
 	display: block;
 	font-weight: 300;
 	line-height: 1.75;
@@ -142,21 +142,21 @@ a.no-link {
 }
 
 .container .join-box a.join-button {
-	font-size:1.500em;
+	font-size: 1.500em;
 	color: #fff;
-	background:none;
-	padding:0.500em;
-	margin:0.500em;
+	background: none;
+	padding: 0.500em;
+	margin: 0.500em;
 	text-decoration: none;
 	-webkit-border-radius: 0.188em;
 	-moz-border-radius: 0.188em;
 	border-radius: 0.188em;
-	border:solid 1px #fff;
+	border: solid 1px #fff;
 }
 
 .container .join-box a.join-button:hover {
-	color:#ce1126;
-	background-color:#fff;
+	color: #305A91;
+	background-color: #fff;
 	text-decoration: none;
 }
 
@@ -165,13 +165,13 @@ a.no-link {
 	width: 100%;
 	max-width: 60em;
 	margin: 0 auto;
-	clear:both;
-	text-align:center;
+	clear: both;
+	text-align: center;
 	padding: 3.125em 3.125em 0;
 }
 
 .container > footer span {
-	font-size:0.750em;
+	font-size: 0.750em;
 	display: block;
 	font-weight: 300;
 	line-height: 1.8;
@@ -180,6 +180,6 @@ a.no-link {
 }
 
 .container > footer img {
-	height:2.500em;
-	margin:2.500em 0;
+	height: 2.500em;
+	margin: 2.500em 0;
 }

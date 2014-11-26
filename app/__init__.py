@@ -1,23 +1,14 @@
 import os
-import requests
-import json
 
-from flask import Flask, url_for, redirect, render_template, request, abort
+from flask import Flask, render_template
 from flask.ext import admin, login
-from flask.ext.sqlalchemy import SQLAlchemy
 
 from flask_debugtoolbar import DebugToolbarExtension
 
 from werkzeug.contrib.fixers import ProxyFix
-from werkzeug.routing import BaseConverter
 
-from sqlalchemy import func
-from sqlalchemy.dialects.postgresql import JSON
-from sqlalchemy.orm.exc import NoResultFound
-from sqlalchemy.orm.exc import MultipleResultsFound
-
-from .models import db, User, Company, Pair
-from .views import AdminIndexView, CompanyView, TypeformView
+from app.models import db, User, Company, Pair
+from app.views import AdminIndexView, CompanyView, TypeformView
 
 app = Flask(__name__)
 app.config.from_object(os.environ['APP_SETTINGS'])
@@ -74,26 +65,6 @@ def robots_txt():
 @app.route("/sitemap.xml")
 def sitemap_xml():
     return app.send_static_file("sitemap.xml")
-
-@app.errorhandler(404)
-def not_found(e):
-    return render_template('404.html'), 404
-
-@app.errorhandler(401)
-def not_authorized(e):
-    return render_template('401.html'), 401
-
-@app.errorhandler(403)
-def forbidden(e):
-    return render_template('403.html'), 403
-
-@app.errorhandler(410)
-def gone(e):
-    return render_template('410.html'), 410
-
-@app.errorhandler(500)
-def internal_server_error(e):
-    return render_template('500.html'), 500
 
 
 # Initialize flask-login

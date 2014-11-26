@@ -16,8 +16,8 @@ def database_setup():
     db.create_all()
 
     # Add admin account
-    admin = User(login=app.config['ADMIN_USER'],\
-                password=generate_password_hash(app.config['ADMIN_PASS']))
+    admin = User(login=app.config['ADMIN_USER'],
+                 password=generate_password_hash(app.config['ADMIN_PASS']))
     db.session.add(admin)
 
     # Initialize 'since' variable
