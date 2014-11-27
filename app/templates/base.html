@@ -40,7 +40,7 @@
             <footer>
             	<span>{# Brought to you by <a href="http://cloudients.com" target="_blank">Cloudients</a>.  #}All the logos and trademarks used on this website belong to its rightful owner.<br>
                 Thanks to <a href="http://cloudients.com" target="_blank">Cloudients</a> for the initial code base.</span>
-                <a href="http://foundedx.com" class="no-link"><img src="{{ url_for('static', filename='images/partoffoundedx.png') }}" alt="Founded X"></a>
+                <a href="http://foundedx.com" class="no-link"><img src="{{ url_for('static', filename='images/partoffoundedx.png') }}" alt="Part of Founded X"></a>
             </footer>
             {% endblock %}
 		</div>
@@ -81,38 +81,6 @@
 	  ga('create', 'UA-42917079-2', 'auto');
 		ga('require', 'displayfeatures');
 	  ga('send', 'pageview');
-	</script>
-
-	{# Minimal form #}
-	<script src="{{ url_for('static', filename='js/classie.js') }}"></script>
-	<script src="{{ url_for('static', filename='js/stepsForm.js') }}"></script>
-	<script>
-        $(function() {
-			var theForm = document.getElementById( 'theForm' );
-
-			new stepsForm( theForm, {
-				onSubmit : function( form ) {
-					// hide form
-					classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
-
-					/*
-					form.submit()
-					or
-					AJAX request (maybe show loading indicator while we don't have an answer..)
-					*/
-
-					// let's just simulate something...
-					var messageEl = theForm.querySelector( '.final-message' );
-					messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
-					classie.addClass( messageEl, 'show' );
-				}
-			} );
-
-			$('.join_the_list').on('click', function (e) {
-                e.preventDefault();
-                $('.join_form').slideDown('fast');
-            });
-		});
 	</script>
 
 	{# Twitter #}

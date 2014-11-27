@@ -183,12 +183,3 @@ a.no-link {
 	height: 5em;
 	margin: 2.500em 0;
 }
-
-.container .join-box .join_form span, .simform .number:after {
-	margin: inherit;
-	font-size: .6em;
-}
-
-.join_form {
-	display: none;
-}
