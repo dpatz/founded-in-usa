@@ -31,7 +31,7 @@ def database_setup():
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Run Founded in Romania app')
+    parser = argparse.ArgumentParser(description='Run Founded in America app')
     parser.add_argument('--setup', dest='run_setup', action='store_true')
 
     args = parser.parse_args()

@@ -8,13 +8,13 @@
 		<meta name="description" content="United States has the largest startup scene in the world. We list innovative startups with US roots." />
 		<meta name="keywords" content="US, USA, United States, American, America, startups, entrepreneurs, innovation" />
 
-    <meta property="og:title" content="Founded in USA - The most innovative startups in the US" />
-		<meta property="og:description" content="United States has the largest startup scene in the world. We list innovative startups with US roots." />
-		<meta property="og:site_name" content="Founded in USA" />
-		<meta property="og:image" content="http://foundedinusa.com/static/images/avatar.png" />
+    	<meta property="og:title" content="Founded in America - The most innovative startups in the US" />
+		<meta property="og:description" content="America has the largest startup scene in the world. We list innovative startups with American roots." />
+		<meta property="og:site_name" content="Founded in America" />
+		<meta property="og:image" content="http://foundedinamerica.com/static/images/hamburger.png" />
 
 		<meta name="twitter:site" content="@foundedinusa" />
-		<meta name="twitter:title" content="Founded in USA - The most innovative startups in the United States" />
+		<meta name="twitter:title" content="Founded in America - The most innovative startups in America" />
 
 		{# <meta name="author" content="cloudients" /> #}
 
@@ -40,14 +40,14 @@
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
 		<script src="{{ url_for('static', filename='js/modernizr.custom.js') }}"></script>
 
-		<title>{% block title %}{% endblock %}</title>
+		<title>Founded in America - {% block page_title %}{% endblock %}</title>
         {% endblock %}
 	</head>
 	<body>
 		<div class="container">
             {% block container %}
 			<header class="clearfix">
-            	<a href="http://foundedinusa.com" class="no-link"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo"></a>
+            	<a href="/" class="no-link"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo"></a>
                 {% block container_header%}
                 {% endblock %}
 			</header>

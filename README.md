@@ -1,6 +1,6 @@
-# Founded In USA
+# Founded In America
 
-  * Website for [www.foundedinusa.com](http://foundedinusa.com).
+  * Website for [www.foundedinamerica.com](http://www.foundedinamerica.com).
   * Created by Daniel Patz.
   * Credit goes to [Cloudients](http://www.cloudients.com) for initial code base.
 
@@ -56,7 +56,7 @@
 
   2. After cloning the repo create the virtualenv
     ```shell
-    cd founded-in-romania
+    cd founded-in-america
     virtualenv venv
     ```
 

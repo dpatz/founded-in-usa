@@ -1,19 +1,22 @@
 {% extends "base.html" %}
-{% block title %}Founded in USA - The most innovative startups in the USA{% endblock %}
+
+{% block page_title %}The most innovative startups in America{% endblock %}
+
 {% block head %}
     {{ super() }}
-        <meta property="og:url" content="http://foundedinusa.com/" />
-        <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.foundedinamerica.com" />
+    <meta property="og:type" content="website" />
 
-        <script>
-        /**
-        * Function that tracks a click on an outbound link in Google Analytics.
-        */
-        var trackOutboundLink = function(url) {
-           ga('send', 'event', 'outbound', 'click', url);
-        }
-        </script>
+    <script>
+    /**
+    * Function that tracks a click on an outbound link in Google Analytics.
+    */
+    var trackOutboundLink = function(url) {
+       ga('send', 'event', 'outbound', 'click', url);
+    }
+    </script>
 {% endblock %}
+
 {% block container_header%}
     <h1>Founded in America - The most innovative startups in America</h1>
     <span>
@@ -21,57 +24,59 @@
             America is a nation of inventors. We were behind the swivel chair, Voyager 1, the 3D printer, bifocals, the Snuggie, and Beats by Dre&#8482;. Remember paper clips? That was us too, probably. Also French fries.
         </p>
         <p>
-            So it stands to reason that we’d have a pretty thriving startup scene. Inspired by <a href="http://foundedinholland.com" target="_blank">Founded in Holland</a>, this list promotes US startups that are working on the next Voyager 1, or Snuggie 2.0. Learn more about the initiative <a href="/about">here</a>, or just buy a plane ticket and fly here now. We’ll save you a seat.
+            So it stands to reason that we’d have a pretty thriving startup scene. Inspired by <a href="http://foundedinholland.com" target="_blank">Founded in Holland</a>, this list promotes American startups that are working on the next Voyager 1, or Snuggie 2.0. <a href="/about">Learn more about the initiative</a>, or just buy a plane ticket and fly here now. We’ll save you a seat.
         </p>
     </span>
-    <span class="apply">Want to join this list? <a href="#join">Submit your US startup.</a></span>
+    <span class="apply">Want to join this list? <a href="#join">Submit your American startup.</a></span>
 {% endblock %}
 
 {% block container_inner%}
-
-<ul class="cbp-rfgrid">
-    {% for company in companies %}
-    <li>
-        <a href="{{ company.url }}" target="_blank" onclick="trackOutboundLink('{{ company.url }}'); return true;">
-            <img src="static/images/logos/{{ company.logo }}" alt="{{ company.name }}" />
-            <div>
-                <h3>{{ company.name }}</h3>
-            </div>
-        </a>
-    </li>
-    {% endfor %}
-</ul>
+    <ul class="cbp-rfgrid">
+        {% for company in companies %}
+        <li>
+            <a href="{{ company.url }}" target="_blank" onclick="trackOutboundLink('{{ company.url }}'); return true;">
+                <img src="static/images/logos/{{ company.logo }}" alt="{{ company.name }}" />
+                <div>
+                    <h3>{{ company.name }}</h3>
+                </div>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
 {% endblock %}
 
 {% block container_join_box %}
     <div class="join-box">
         <a name="join" class="no-link"></a>
-        <span><strong>What do all these companies have in common?</strong><br>
-        1) They were founded in the United States in the 21st century<br>
-        2) They stand poised to reshape the economy as we know it<br>
-        3) They all have a strict “no replicants” hiring policy<br><br>
-        {# Does your startup meet these criteria and do you want to support this initiative?<br> #}
-        {# <strong>Submit your US startup by filling out the <a class="typeform-share link" href="https://cloudients.typeform.com/to/kEfvl8" data-mode="2" target="_blank">application&nbsp;form</a>.</strong> #}
-        {# <br> #}
-        {# <strong>Do you know an innovative startup? <a class="typeform-share link" href="https://cloudients.typeform.com/to/i8zVtD" data-mode="2" target="_blank">Let us know it</a>.</strong> #}
+        <span class="no_margin">
+            <strong>What do all these companies have in common?</strong><br>
+            1) They were founded in the United States in the 21st century<br>
+            2) They stand poised to reshape the economy as we know it<br>
+            3) They all have a strict “no replicants” hiring policy<br><br>
+            {# Does your startup meet these criteria and do you want to support this initiative?<br> #}
+            {# <strong>Submit your US startup by filling out the <a class="typeform-share link" href="https://cloudients.typeform.com/to/kEfvl8" data-mode="2" target="_blank">application&nbsp;form</a>.</strong> #}
+            {# <br> #}
+            {# <strong>Do you know an innovative startup? <a class="typeform-share link" href="https://cloudients.typeform.com/to/i8zVtD" data-mode="2" target="_blank">Let us know it</a>.</strong> #}
 
-        {# <br><br> #}<br>
-        <div>
-          <a class="typeform-share link join-button" href="https://foundedinusa.typeform.com/to/jmiHgr" data-mode="2" target="_blank">Join the list</a></span>
-          {# <a class="typeform-share link join-button" href="https://cloudients.typeform.com/to/i8zVtD" data-mode="2" target="_blank">Suggest a Startup</a></span> #}
-        </div>
-        <br><br>
-        <span>Follow on <a href="https://www.facebook.com/foundedinusa" target="_blank"><i class="fa fa-facebook-square"></i>&nbsp;Facebook</a> &
-          <a href="https://twitter.com/foundedinusa" target="_blank"><i class="fa fa-twitter-square"></i>&nbsp;Twitter</a>
-           &nbsp;&middot;&nbsp; <a href="/about">About&nbsp;the&nbsp;initiative</a>
-           &nbsp;&middot;&nbsp; <a href="https://drive.google.com/folderview?id=0B3DAegL7MGt7MmRkbFRROVBPSmM&usp=sharing" target="_blank">Press&nbsp;kit</a>
-           &nbsp;&middot;&nbsp; <a class="typeform-share link" href="https://cloudients.typeform.com/to/kEfvl8" data-mode="2" target="_blank">Join&nbsp;the&nbsp;list</a>
-           &nbsp;&middot;&nbsp; <a href="mailto:join@foundedinusa.com" target="_blank">Contact</a></span>
+            {# <br><br> #}<br>
+            <div>
+              <a class="typeform-share link join-button" href="https://foundedinusa.typeform.com/to/jmiHgr" data-mode="2" target="_blank">Join the list</a>
+              {# <a class="typeform-share link join-button" href="https://cloudients.typeform.com/to/i8zVtD" data-mode="2" target="_blank">Suggest a Startup</a></span> #}
+            </div>
+            <br><br>
+            <span>
+                Follow on <a href="https://www.facebook.com/379013982261327" target="_blank"><i class="fa fa-facebook-square"></i>&nbsp;Facebook</a> &
+                <a href="https://twitter.com/foundedinusa" target="_blank"><i class="fa fa-twitter-square"></i>&nbsp;Twitter</a>
+                &nbsp;&middot;&nbsp; <a href="/about">About&nbsp;the&nbsp;initiative</a>
+                {# &nbsp;&middot;&nbsp; <a href="https://drive.google.com/folderview?id=0B3DAegL7MGt7MmRkbFRROVBPSmM&usp=sharing" target="_blank">Press&nbsp;kit</a> #}
+                &nbsp;&middot;&nbsp; <a class="typeform-share link" href="https://foundedinusa.typeform.com/to/jmiHgr" data-mode="2" target="_blank">Join&nbsp;the&nbsp;list</a>
+                &nbsp;&middot;&nbsp; <a href="mailto:join@foundedinamerica.com" target="_blank">Contact</a>
+            </span>
 
-        <div align="center" style="width:170px; margin:0 auto;">
-            <div class="fb-like" data-href="http://foundedinusa.com/" data-layout="button" data-action="like" data-show-faces="false" data-share="true" data-colorscheme="light" style="margin-bottom:-20px; padding:5px;"></div>
-            <div style="padding:5px;"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.foundedinusa.com" data-via="foundedinusa" data-count="none">Tweet</a></div>
-        </div>
-
+            <div align="center" style="width:170px; margin:0 auto;">
+                <div class="fb-like" data-href="http://www.foundedinamerica.com/" data-layout="button" data-action="like" data-show-faces="false" data-share="true" data-colorscheme="light" style="margin-bottom:-20px; padding:5px;"></div>
+                <div style="padding:5px;"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.foundedinamerica.com" data-via="foundedinusa" data-count="none">Tweet</a></div>
+            </div>
+        </span>
     </div>
 {% endblock %}
