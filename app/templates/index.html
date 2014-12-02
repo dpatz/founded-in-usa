@@ -37,7 +37,7 @@
         {% for company in companies %}
         <li>
             <a href="{{ company.url }}" target="_blank" onclick="trackOutboundLink('{{ company.url }}'); return true;">
-                <img src="{{ url_for('static', filename='images/logos/' + company.logo) }}" alt="{{ company.name }}" />
+                <img src="https://s3.amazonaws.com/foundedinamerica/logos/{{ company.logo }}" alt="{{ company.name }}" />
 
                 <div>
                     <h3>{{ company.name }}</h3>
